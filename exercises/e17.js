@@ -6,7 +6,22 @@
 // NOTE: You can NOT use the array.includes() method in your code
 
 export function doesArrayInclude(array, value) {
-  // Your code goes here...
+  console.log(array);
+  console.log(value);
+    for (let i = 0; i < array.length; i++) {
+      let check = false;
+      for (let x = 0; x < array[i].length; x++) {
+        if (array[i][x] === value) {
+          check = true;
+          break; 
+        } 
+      } 
+      if (check) {
+        return true;
+      }
+    }
+     
+    return false;
 
 }
 
